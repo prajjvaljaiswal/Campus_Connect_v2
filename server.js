@@ -10,9 +10,9 @@ app.use(express.json())
 try {
     dbconnect().then(() =>{
 
-        app.get("/", (req, res) => {
-            res.json("Hello World!!")
-        })
+        // app.get("/", (req, res) => {
+        //     res.json("Hello World!!")
+        // })
         
         app.get("/users", async (req, res) => {
             try {
