@@ -13,34 +13,30 @@ try {
         // app.get("/", (req, res) => {
         //     res.json("Hello World!!")
         // })
-        
-        app.use("/users", async (req, res) => {
-            try {
-                const data = await User.find({ collageName: "University of Mumbai" })
-                res.json(data)
-            } catch (error) {
-                res.status(400).json({ message: error })
-            }
-        })
-
-        app.get("/get",async(req,res)=>{
-            try {
-                const data = await User.findById('67a88ae3becb58f2f6af98b5')
-                res.json(data)
-            } catch (error) {
-                res.status(400).json({ message: error })
-            }
-        })
+        console.log("connect")
 
     })
 } catch (error) {
     console.log(error)
 }
 
+app.use("/users", async (req, res) => {
+    try {
+        const data = await User.find({ collageName: "University of Mumbai" })
+        res.json(data)
+    } catch (error) {
+        res.status(400).json({ message: error })
+    }
+})
 
-
-
-
+app.get("/get",async(req,res)=>{
+    try {
+        const data = await User.findById('67a88ae3becb58f2f6af98b5')
+        res.json(data)
+    } catch (error) {
+        res.status(400).json({ message: error })
+    }
+})
 
 // app.use("/auth", AuthRouter)
 // app.use("/collage", CollageRouter)
