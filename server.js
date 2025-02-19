@@ -22,7 +22,7 @@ try {
 
 app.use("/users", async (req, res) => {
     try {
-        const data = await User.find({ collageName: "University of Mumbai" })
+        const data = await User.find({ collageName: "St. Xavier's College Mumbai" })
         res.json(data)
     } catch (error) {
         res.status(400).json({ message: error })
