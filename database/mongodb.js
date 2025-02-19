@@ -1,6 +1,6 @@
-import dotenv from "dotenv"
+const dotenv = require("dotenv")
 // const { MongoClient, ServerApiVersion } = require('mongodb');
-import mongoose from "mongoose"
+const mongoose = require("mongoose")
 
 dotenv.config()
 const uri = process.env.MONGODB_SERVER
@@ -14,4 +14,4 @@ const dbconnect= async()=>{
   }
 }
 
-export default dbconnect;
+module.exports = dbconnect
