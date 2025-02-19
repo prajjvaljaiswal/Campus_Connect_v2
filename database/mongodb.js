@@ -7,7 +7,7 @@ const uri = process.env.MONGODB_SERVER
 
 const dbconnect= async()=>{
   try {
-    await mongoose.connect(uri)
+    await mongoose.connect("mongodb+srv://prajjaiswal158:9967138778@compusconnect.xo5zf.mongodb.net")
     console.log("cn")
   } catch (error) {
     console.log(error)
